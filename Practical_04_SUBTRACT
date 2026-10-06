@@ -1,0 +1,59 @@
+```asm
+; ==============================================================
+; PRACTICAL 4
+; SUBTRACT Operation on Two User-Entered Numbers
+; ==============================================================
+
+; AIM:
+; To write an assembly language program that reads two numbers
+; A and B from the user and displays the result of A - B.
+
+; THEORY:
+; The Basic Computer does not have a direct SUBTRACT instruction.
+; Subtraction is performed using 2's complement.
+;
+; A - B = A + (2's complement of B)
+;
+; 2's complement of B = B' + 1
+;
+; CMA -> finds the 1's complement of B
+; INC -> adds 1 to obtain the 2's complement of B
+; ADD A -> adds A to (-B), giving A - B
+
+; ALGORITHM:
+; 1. Read the first number A.
+; 2. Store A in memory.
+; 3. Read the second number B.
+; 4. Find the 1's complement of B using CMA.
+; 5. Add 1 using INC to obtain 2's complement of B.
+; 6. Add A using ADD A.
+; 7. Store the result in DIFF.
+; 8. Display the result.
+; 9. Halt the program.
+
+; PROGRAM:
+; ==============================================================
+
+INP
+STA A
+INP
+CMA
+INC
+ADD A
+STA DIFF
+OUT
+HLT
+
+A: .data 1 0
+DIFF: .data 1 0
+
+; ==============================================================
+; TEST CASE:
+; A = 18
+; B = 50
+; A - B = 18 - 50 = -32
+;
+; RESULT:
+; -32
+; ==============================================================
+```
