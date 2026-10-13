@@ -1,0 +1,13 @@
+; ==============================================================
+; Practical 9 : Register-reference instructions CIR, CIL
+; Machine : BasicComputer.cpu (Mano's Basic Computer)
+; ==============================================================
+
+        LDA NUM
+        CIR
+        CIR
+        CIL
+        CIL
+        HLT
+
+NUM:    .data 1 9
