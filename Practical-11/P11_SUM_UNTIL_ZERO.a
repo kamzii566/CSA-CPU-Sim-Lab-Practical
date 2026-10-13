@@ -1,0 +1,19 @@
+; ==============================================================
+; Practical 11 : Sum integers until zero is read
+; Machine : BasicComputer.cpu (Mano's Basic Computer)
+; ==============================================================
+
+LOOP: INP
+      SZA
+      BUN ADDIT
+      BUN DONE
+
+ADDIT: ADD SUM
+       STA SUM
+       BUN LOOP
+
+DONE: LDA SUM
+      OUT
+      HLT
+
+SUM:  .data 1 0
