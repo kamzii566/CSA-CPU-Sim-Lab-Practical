@@ -1,0 +1,14 @@
+
+; ==============================================================
+; Practical 7 : Register-reference instructions CLA, CMA, CME, HLT
+; Machine     : BasicComputer.cpu (Mano's Basic Computer)
+; Observe AC, E, PC, AR and IR (Decimal) after every instruction.
+; ==============================================================
+
+        LDA NUM
+        CLA
+        CMA
+        CME
+        HLT
+
+NUM:    .data 1 25
